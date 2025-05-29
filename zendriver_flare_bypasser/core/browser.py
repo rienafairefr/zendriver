@@ -11,6 +11,7 @@ import shutil
 import urllib.parse
 import urllib.request
 import warnings
+import shlex
 from collections import defaultdict
 from typing import List, Tuple, Union
 
