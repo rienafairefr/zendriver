@@ -110,6 +110,7 @@ class Config:
         self._default_browser_args = [
             "--no-first-run",
             "--no-default-browser-check",
+            "--enable-logging", "--v=3",
             "--disable-infobars",
             #"--disable-breakpad",
             #"--disable-component-update",
