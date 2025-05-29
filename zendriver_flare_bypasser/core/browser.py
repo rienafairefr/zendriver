@@ -376,8 +376,9 @@ class Browser:
                      _, stderr_bytes = await self._process.communicate()
                      stderr = stderr_bytes.decode()[:1000]
                      print(stderr)
-                except Exception :
-                    pass
+                except Exception as e:
+                    logger.debug("Exception happened")
+                    logger.debug(str(e))
                 self._process = None
                 self._process_pid = None
             raise Exception(
