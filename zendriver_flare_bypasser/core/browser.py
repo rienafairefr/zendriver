@@ -351,6 +351,7 @@ class Browser:
                 )
             )
             self._process_pid = self._process.pid
+            print(f"{self._process_pid=}")
 
         self._http = HTTPApi((self.config.host, self.config.port))
         util.get_registered_instances().add(self)
@@ -373,6 +374,7 @@ class Browser:
                 try :
                      _, stderr_bytes = await self._process.communicate()
                      stderr = stderr_bytes.decode()[:1000]
+                     print(stderr)
                 except Exception :
                     pass
                 self._process = None
