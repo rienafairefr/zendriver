@@ -338,7 +338,7 @@ class Browser:
         logger.info(
             "starting\n\texecutable :%s\n\narguments:\n%s", exe, "\n\t".join(params)
         )
-        logger.info(f"CMD: {shlex.join(exec, *params)}")
+        logger.info(f"CMD: {shlex.join((exe, *params))}")
         if not connect_existing:
             self._process: asyncio.subprocess.Process = (
                 await asyncio.create_subprocess_exec(
